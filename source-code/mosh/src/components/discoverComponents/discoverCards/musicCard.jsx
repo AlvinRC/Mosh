@@ -15,6 +15,9 @@ import ShareIcon from '@material-ui/icons/Share'
 import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
 
 import {fire} from "../../../config/fire"
+import CircularProgress from '@material-ui/core/CircularProgress'; // Import loading spinner
+
+
 
 let textTheme = createMuiTheme();
 textTheme = responsiveFontSizes(textTheme);
@@ -84,9 +87,25 @@ export default function MusicCard(props) {
       alert(err);
     })
   }
+  // Loading Dialog
+  const LoadingDialog = () => (
+    <Dialog
+      open={props.loading} // Open dialog when loading is true
+      aria-labelledby="loading-dialog-title"
+      aria-describedby="loading-dialog-description"
+    >
+      <DialogTitle id="loading-dialog-title">{"Loading..."}</DialogTitle>
+      <DialogContent>
+        <CircularProgress /> {/* Display a loading spinner */}
+      </DialogContent>
+    </Dialog>
+  );
+
 
   return (
     <>
+    {props.loading && <LoadingDialog />} {/* Render loading popup if loading */}
+
     <Card className={classes.root}>
         <CardMedia
             className={classes.cover}
