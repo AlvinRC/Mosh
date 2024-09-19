@@ -16,6 +16,22 @@ new music and people with similar taste.
 - Ability to play and easily share music they discover across streaming service platforms,
 encouraging shared experiences through music.
 
+Usage: 
+(Web Demo)
+- NOTE: Was being maintained by other members but is no longer so features may not work
+mosh-37501.web.app/
+
+(Local Hosting)
+- First run the backend
+cd source-code/mosh/src
+cd auth-server/authorization_code
+node app.js
+- Then run the frontend
+// In a separate terminal
+cd ../../
+yarn start
+
+Note: for backend don't need to replace spotify api secret/id
 
 Software Architecture:
 ![alt text](images/image-0.png)
@@ -37,6 +53,7 @@ Final Interface Screenshots:
 
 - Discover Music Page
 ![alt text](images/image-6.png)
+![alt text](images/image-10.png)
 
 - Discover People/Connections Page
 ![alt text](images/image-7.png)
