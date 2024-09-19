@@ -1,6 +1,6 @@
 import {fire} from './config/fire';
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Discover from "./containers/Discover";
 import Homescreen from "./containers/Homescreen";
 import Landing from "./containers/Landing";
@@ -28,6 +28,7 @@ class App extends Component {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
         console.log("User logged in");
+        console.log(user);
         this.setState({ user });
         localStorage.setItem('user', user.uid);
         
@@ -44,24 +45,24 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-        <Route exact path="/">
-            {this.state.user === null ? <Landing/> : <Redirect to="/connect"/>}
-          </Route>
-          <Route path="/discover">
-            {this.state.user !== null ? <Discover/> : <Redirect to="/"/>}
-          </Route>
-          <Route path="/home">
-            {/* <Homescreen/> */}
-            {this.state.user !== null ? <Homescreen/> : <Redirect to="/"/>}
-          </Route>
-          <Route path="/connect">
-            {/* //<Connect/> */}
-            <Connect/>
-            {/* {this.state.user !== null ? <Connect/> : <Redirect to="/"/>} */}
-          </Route>
-          <Route path="/share">
-            {this.state.user !== null ? <Share/> : <Redirect to="/"/>}
-          </Route>
+          <Route exact path="/">
+              {this.state.user === null ? <Landing/> : <Redirect to="/connect"/>}
+            </Route>
+            <Route path="/discover">
+              {this.state.user !== null ? <Discover/> : <Redirect to="/"/>}
+            </Route>
+            <Route path="/home">
+              {/* <Homescreen/> */}
+              {this.state.user !== null ? <Homescreen/> : <Redirect to="/"/>}
+            </Route>
+            <Route path="/connect">
+              {/* //<Connect/> */}
+              <Connect/>
+              {/* {this.state.user !== null ? <Connect/> : <Redirect to="/"/>} */}
+            </Route>
+            <Route path="/share">
+              {this.state.user !== null ? <Share/> : <Redirect to="/"/>}
+            </Route>
         </Router>
       </div>
     )

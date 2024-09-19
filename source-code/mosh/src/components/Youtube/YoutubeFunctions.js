@@ -6,7 +6,8 @@ import {fire} from '../../config/fire'
 var count = 0;
 //var fb=fire;
 const API_KEY = 'AIzaSyBhklDEhDYrLwf5mMkLKsA34Btqjpj8S7k';
-const CLIENT_ID = '542831090816-nvuicfih0d0ulh87cjinkfrmg1tlfciq.apps.googleusercontent.com'
+const CLIENT_ID = '806342003387-86r6hto4t6i82bsf6uuba1fcjoqjucm3.apps.googleusercontent.com';
+//const CLIENT_ID = '542831090816-nvuicfih0d0ulh87cjinkfrmg1tlfciq.apps.googleusercontent.com'
 const AUTH_SCOPES = [
     'email',
     'profile',
@@ -52,6 +53,7 @@ async function handleIsSignedIn(isSignedIn) {
                     authResponse.id_token,
                     authResponse.access_token
                 )
+                console.log("signing into firebase")
                 //sign in to firebase
                 let rr1 = await fire.auth().signInWithCredential(credential)
                 .then(({ user }) => {
@@ -64,7 +66,7 @@ async function handleIsSignedIn(isSignedIn) {
                     console.log("rerender")
 
                 });
-                //console.log(rr1)
+                console.log("Signed in" + rr1)
                 //make api calls from here
             })
             console.log(r1)

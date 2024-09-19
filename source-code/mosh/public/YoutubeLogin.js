@@ -2,8 +2,8 @@
 // Options
 
 
-//const CLIENT_ID = '806342003387-86r6hto4t6i82bsf6uuba1fcjoqjucm3.apps.googleusercontent.com';
-const CLIENT_ID = '542831090816-nvuicfih0d0ulh87cjinkfrmg1tlfciq.apps.googleusercontent.com';
+const CLIENT_ID = '806342003387-86r6hto4t6i82bsf6uuba1fcjoqjucm3.apps.googleusercontent.com';
+// const CLIENT_ID = '542831090816-nvuicfih0d0ulh87cjinkfrmg1tlfciq.apps.googleusercontent.com';
 const DISCOVERY_DOCS = [
   'https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'
 ];

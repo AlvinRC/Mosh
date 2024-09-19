@@ -13,9 +13,9 @@ var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 
-var client_id = '401c98418bb443c7a5ac8ba2a39dca0a'; // Your client id
-var client_secret = 'SECRET'; // Your secret
-var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
+var client_id = '401c98418bb443c7a5ac8ba2a39dca0a'; // Your Spotify client id
+var client_secret = 'SECRET'; // Your Spotify API secret
+var redirect_uri =  'http://localhost:3000/callback';//'http://localhost:8888/callback'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters

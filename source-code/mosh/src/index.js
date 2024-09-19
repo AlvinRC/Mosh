@@ -10,7 +10,7 @@ const script = document.createElement("script");
 script.src = "https://apis.google.com/js/api.js";
 script.onload = () => {
     gapi.load('client:auth2', () => {
-        gapi.client.setApiKey("AIzaSyBhklDEhDYrLwf5mMkLKsA34Btqjpj8S7k");
+        gapi.client.setApiKey("AIzaSyANtpXr6-ugE8ujsVhdC4wrFpUmf4rdrEM"); //AIzaSyBhklDEhDYrLwf5mMkLKsA34Btqjpj8S7k");
         gapi.client.load('youtube', 'v3', () => {
         })
     })

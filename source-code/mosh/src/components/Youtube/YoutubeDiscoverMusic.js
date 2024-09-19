@@ -9,7 +9,8 @@ var db = fire.firestore();
 
 
 const API_KEY = 'AIzaSyBhklDEhDYrLwf5mMkLKsA34Btqjpj8S7k';
-const CLIENT_ID = '542831090816-nvuicfih0d0ulh87cjinkfrmg1tlfciq.apps.googleusercontent.com'
+const CLIENT_ID = '806342003387-86r6hto4t6i82bsf6uuba1fcjoqjucm3.apps.googleusercontent.com';
+// const CLIENT_ID = '542831090816-nvuicfih0d0ulh87cjinkfrmg1tlfciq.apps.googleusercontent.com'
 const AUTH_SCOPES = [
     'email',
     'profile',
@@ -94,6 +95,8 @@ class App extends Component {
                         authResponse.id_token,
                         authResponse.access_token
                     )
+                    console.log("signing into firebase (discover Music)")
+
                     //sign in to firebase
                     fb.auth().signInWithCredential(credential)
                     .then(({ user }) => {
@@ -124,6 +127,7 @@ class App extends Component {
                         });
 
                         this.setState({isSignedIn:true})
+                        console.log(this.state.access_token);
                         console.log("rerender")
                     });
                     //make api calls from here
@@ -161,7 +165,7 @@ class App extends Component {
             }
             console.log(this.state)
             //console.log(this.state.type)
-
+            // console.log("testing")
             return (
                 <div style={{ color: 'white' }}>
                     {/* <h1>GAPI is loaded and ready to use.</h1> */}
