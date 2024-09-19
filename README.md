@@ -19,7 +19,7 @@ encouraging shared experiences through music.
 Usage: 
 (Web Demo)
 - NOTE: Was being maintained by other members but is no longer so features may not work
-mosh-37501.web.app/
+https://mosh-37501.web.app
 
 (Local Hosting)
 - First run the backend
