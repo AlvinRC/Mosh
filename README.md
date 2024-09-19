@@ -63,3 +63,12 @@ Final Interface Screenshots:
 
 - Music Media Page
 ![alt text](images/image-9.png)
+
+
+Notes:
+//For Checking on Firebase + Firestore
+- https://console.firebase.google.com
+//For Checking on Spotify API
+- https://developer.spotify.com/dashboard
+//For Checking on Google Oauth API
+- https://console.cloud.google.com/apis/dashboard
